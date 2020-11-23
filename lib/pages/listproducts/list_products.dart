@@ -1,4 +1,5 @@
 import 'package:demo_httprequests/models/product_model.dart';
+import 'package:demo_httprequests/pages/listproducts/components/items_card.dart';
 import 'package:demo_httprequests/services/api_service.dart';
 import 'package:flutter/material.dart';
 
@@ -57,28 +58,9 @@ class _ListProductState extends State<ListProduct> {
               ),
               itemCount: productsDataList.length,
               itemBuilder: (context, id) {
-                return Container(
-                  color: Colors.deepOrange,
-                  child: Column(
-                    children: [
-                      Text(
-                        productsDataList[id].productname,
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        productsDataList[id].description,
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        productsDataList[id].quantity,
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        productsDataList[id].price,
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
+                return ItemsCard(
+                  productsDataList: productsDataList,
+                  id: id,
                 );
               }),
         ),
@@ -86,3 +68,4 @@ class _ListProductState extends State<ListProduct> {
     );
   }
 }
+
