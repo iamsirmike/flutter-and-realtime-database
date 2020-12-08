@@ -1,6 +1,6 @@
 # demo_httprequests
 
-A new Flutter project.
+A demo of saving and retrieving data from firebase realtime database using http requests.
 
 ## Getting Started
 
